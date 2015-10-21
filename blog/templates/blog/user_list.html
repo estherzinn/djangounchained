@@ -9,9 +9,16 @@
       <p><a href="/">Index</a></p>
       {% for user in users %}
           <div>
-          	{{ user.posts }}
-             <a href="/postsby/{{user.id}}">{{user.username}}</a> {{user.post.count}}
+             <a href="/postsby/{{user.id}}">{{user.username}}</a>
           </div>
+        {% for post in posts %}
+          {{ total = 0 }}
+          {% if post.author = user %}
+            {{ post.title }}
+            {{ total|add:"1" }}
+          {% endif %}
+        {% endfor %}
+        <strong>ss{{ total }}</strong>
       {% endfor %}
     </body>
 </html>
