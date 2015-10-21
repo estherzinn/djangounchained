@@ -18,9 +18,10 @@
       <!-- Posts -->
       {% for post in posts %}
           <div class="post-container">
-              <div><h2><a href="#">{{ post.title }}</a></h2></div>
+              <div><h2><a href="/post/{{post.id}}">{{ post.title }}</a></h2></div>
               <p><small>{{ post.text|linebreaks }}</small></p>
               <p><small><em>published: {{ post.published_date }}</em></small></p>
+
           </div>
       {% endfor %}
     </body>
