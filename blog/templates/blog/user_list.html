@@ -9,6 +9,7 @@
       <p><a href="/">Index</a></p>
       {% for user in users %}
           <div>
+          	{{ user.posts }}
              <a href="/postsby/{{user.id}}">{{user.username}}</a> {{user.post.count}}
           </div>
       {% endfor %}
