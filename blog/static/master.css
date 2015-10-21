@@ -33,7 +33,7 @@ a {
 
 a:hover {text-decoration: underline}
 
-ul{
+ul#main-nav{
   margin: 0;
   top:0;
   list-style: none;
@@ -44,20 +44,39 @@ ul{
   font-size: 1.3em;
 }
 
-li{
+ul#main-nav li{
     display: inline-block;
     padding-right: 2em;
     line-height: 2em;
 }
 
-li:first-child{
+ul#main-nav li:first-child{
   padding-left: 1em;
 }
 
-li a {
+ul#main-nav li a {
   color:#fff;
   text-shadow: 1px 1px 1px #222;
 }
+
+ul#user-list {
+  margin: 0;
+  top:0;
+  list-style: none;
+  padding: ;
+  height: 1.5em;
+  font-family: 'lobster', cursive;
+  font-size: 2em;
+}
+
+ul#user-list a{
+  color:#F80;
+  text-shadow: 1px 1px 1px #222;
+
+}
+
+
+
 
 #top-header{
   margin: 0 auto;
