@@ -1,16 +1,33 @@
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Django Girls & Boys blog</title>
+        <link rel="stylesheet" href="/static/master.css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
-      <div>
-          <h1><a href="/">Django Girls Blog</a></h1>
+      <!-- Header -->
+      <div id="top-header">
+          <div id="logo"><img src="/static/girlsboys-bw.png" width="80"></div>
+          <div id="blog-title"><h1><a href="/">Django Girls &amp; Boys Blog</a></h1></div>
       </div>
+      <!-- Nav -->
+      <ul id="main-nav">
+        <li><a href="/">Home<a></li>
+        <li><a href="/contributors">Contributors</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+      <!-- Posts -->
       {% for post in posts %}
+<<<<<<< HEAD
           <div>
               <p>published: {{ post.published_date }}</p>
               <h1><a href="/post/{{post.id}}">{{ post.title }}</a></h1>
               <p>{{ post.text|linebreaks }}</p>
+=======
+          <div class="post-container">
+              <div><h2><a href="#">{{ post.title }}</a></h2></div>
+              <p><small>{{ post.text|linebreaks }}</small></p>
+              <p><small><em>published: {{ post.published_date }}</em></small></p>
+>>>>>>> ea8f635be84f2635ac36459fe126918a613be076
           </div>
       {% endfor %}
     </body>
