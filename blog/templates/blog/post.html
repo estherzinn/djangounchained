@@ -5,4 +5,12 @@
         <p><small>{{ post.text|linebreaks }}</small></p>
         <p><small><em>published: {{ post.published_date }} by <a href="/postsby/{{post.author.id}}">{{post.author}}</a></em></small></p>
     </div>
+    <div class="post-container">
+    	{% for comment in comments %}
+    		<div>
+    			<h3>{{comment.author}}</h3>
+    			<p>{{comment.text}}</p>
+    		</div>
+    	{% endfor %}
+    </div>
   {% endblock content %}
