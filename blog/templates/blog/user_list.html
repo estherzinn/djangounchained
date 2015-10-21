@@ -1,27 +1,25 @@
-<html>
-  <head>
-      <title>Django Girls & Boys blog</title>
-      <link rel="stylesheet" href="/static/master.css" media="screen" title="no title" charset="utf-8">
-  </head>
-  <body>
-    <!-- Header -->
-    <div id="top-header">
-        <div id="logo"><img src="/static/girlsboys-bw.png" width="80"></div>
-        <div id="blog-title"><h1><a href="/">Django Girls &amp; Boys Blog</a></h1></div>
-    </div>
-    <!-- Nav -->
-    <ul id="main-nav">
-      <li><a href="/">Home<a></li>
-      <li><a href="/contributors">Contributors</a></li>
-      <li><a href="/admin">Login</a></li>
-    </ul>
-
+{% extends 'blog/layout.html' %}
+  {% block content %}
     <ul id="user-list">
       {% for user in users %}
+          <div>
+            <a href="/postsby/{{user.id}}">{{user.username}}</a>
+            {% if user.is_superuser %}
+              <span class="super">[Administrator]</a>
+            {% else %}
+              <span class="staff">[Staff Contributor]
+            {% endif %}
+          </div>
+        {% for post in posts %}
+          {% if post.author = user %}
+            <div>
+              <a class="sublink" href="/post/{{post.id}}">{{post}}</a><span class="date">{{post.published_date}}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <strong>{{ total }}</strong>
           	{{ user.posts }}
-             <li><a href="/postsby/{{user.id}}">{{user.username}}</a> {{user.post.count}}</li>
       {% endfor %}
     </ul>
 
-    </body>
-</html>
+ {% endblock content %}

@@ -12,8 +12,9 @@ def post(request, pk):
 	return render(request, 'blog/post.html', {'post': post})
 
 def user_list(request):
-	users = User.objects.all()
-	return render(request, 'blog/user_list.html', {'users': users})
+	users = User.objects.all
+	posts = Post.objects.all
+	return render(request, 'blog/user_list.html', {'users': users, 'posts': posts})
 
 def user_post_list(request, pk):
 	user = User.objects.get(pk=int(pk))
