@@ -21,14 +21,37 @@ h1, h2, h3, h4, h5, h6{
   color: #F80;
 }
 
-p{
+p {
   font-weight: 200;
+}
+
+.super {
+  margin-left: 10px;
+  color: #F00;
+  font-size: .5em;
+}
+
+.staff {
+  margin-left: 10px;
+  color: #00F;
+  font-size: .5em;
+}
+.date {
+  margin-left: 10px;
+  color: #000;
+  font-size: .5em;
 }
 
 a {
   color: #F80;
   text-decoration: none;
   text-shadow: 1px 1px 0px #222;
+}
+
+a.sublink {
+  font-size: .7em;
+  text-shadow: none;
+  margin-left: 12px;
 }
 
 a:hover {text-decoration: underline}
@@ -70,7 +93,7 @@ ul#user-list {
 }
 
 ul#user-list a{
-  color:#F80;
+  /*color:#F80;*/
   text-shadow: 1px 1px 1px #222;
 
 }
