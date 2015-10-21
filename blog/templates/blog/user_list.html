@@ -1,0 +1,27 @@
+<html>
+  <head>
+      <title>Django Girls & Boys blog</title>
+      <link rel="stylesheet" href="/static/master.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="top-header">
+        <div id="logo"><img src="/static/girlsboys-bw.png" width="80"></div>
+        <div id="blog-title"><h1><a href="/">Django Girls &amp; Boys Blog</a></h1></div>
+    </div>
+    <!-- Nav -->
+    <ul id="main-nav">
+      <li><a href="/">Home<a></li>
+      <li><a href="/contributors">Contributors</a></li>
+      <li><a href="/admin">Login</a></li>
+    </ul>
+
+    <ul id="user-list">
+      {% for user in users %}
+          	{{ user.posts }}
+             <li><a href="/postsby/{{user.id}}">{{user.username}}</a> {{user.post.count}}</li>
+      {% endfor %}
+    </ul>
+
+    </body>
+</html>
