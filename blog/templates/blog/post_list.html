@@ -1,18 +1,11 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        <a href="/contributors">Contributors</a>
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="/post/{{post.id}}">{{ post.title }}</a><small>{{post.author}}</small></h1>
-                <p>{{ post.text|linebreaks }}</p>
-            </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends 'blog/layout.html' %}
+  {% block content %}
+      <!-- Posts -->
+      {% for post in posts %}
+          <div class="post-container">
+              <p><h2><a href="/post/{{post.id}}">{{ post.title }}</a></h2></p>
+              <p><small>{{ post.text|linebreaks }}</small></p>
+              <p><small><em>published: {{ post.published_date }} by <a href="/postsby/{{post.author.id}}">{{post.author}}</a></em></small></p>
+          </div>
+      {% endfor %}
+  {% endblock content %}

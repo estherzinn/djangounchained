@@ -1,24 +1,25 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-      <div>
-          <h1><a href="/">Django Girls Blog</a></h1>
-      </div>
-      <p><a href="/">Index</a></p>
+{% extends 'blog/layout.html' %}
+  {% block content %}
+    <ul id="user-list">
       {% for user in users %}
           <div>
-             <a href="/postsby/{{user.id}}">{{user.username}}</a>
+            <a href="/postsby/{{user.id}}">{{user.username}}</a>
+            {% if user.is_superuser %}
+              <span class="super">[Administrator]</a>
+            {% else %}
+              <span class="staff">[Staff Contributor]
+            {% endif %}
           </div>
         {% for post in posts %}
-          {{ total = 0 }}
           {% if post.author = user %}
-            {{ post.title }}
-            {{ total|add:"1" }}
+            <div>
+              <a class="sublink" href="/post/{{post.id}}">{{post}}</a><span class="date">{{post.published_date}}</span>
+            </div>
           {% endif %}
         {% endfor %}
-        <strong>ss{{ total }}</strong>
+        <strong>{{ total }}</strong>
+          	{{ user.posts }}
       {% endfor %}
-    </body>
-</html>
+    </ul>
+
+ {% endblock content %}
