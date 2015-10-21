@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,100|Lobster);
+
+body {
+  margin: 0;
+  top:0;
+  left:0;
+  padding:0;
+  background-color: #eee;
+  color:#333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  background-image: url("http://corpuschristimiami.com/wp-content/uploads/2015/04/Abstract-Background-White.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  color: #F80;
+}
+
+p{
+  font-weight: 200;
+}
+
+a {
+  color: #F80;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #222;
+}
+
+a:hover {text-decoration: underline}
+
+ul{
+  margin: 0;
+  top:0;
+  list-style: none;
+  padding: 0;
+  background: #F80;
+  height: 2em;
+  font-family: 'lobster', cursive;
+  font-size: 1.3em;
+}
+
+li{
+    display: inline-block;
+    padding-right: 2em;
+    line-height: 2em;
+}
+
+li:first-child{
+  padding-left: 1em;
+}
+
+li a {
+  color:#fff;
+  text-shadow: 1px 1px 1px #222;
+}
+
+#top-header{
+  margin: 0 auto;
+  width:100%;
+  background-color:#555;
+  font-size: 1.8em;
+  height: 3em;
+}
+
+#top-header a:hover {
+  text-decoration: none;
+}
+
+#top-header>h1{
+  margin: 0 auto;
+  width:100%;
+  padding-top:.1em;
+}
+
+#logo{float: left; line-height: 0; top: 0; margin:.3em; }
+
+#blog-title{float: left;
+  line-height: 0;
+  top:0;
+  margin-left: 2em;
+  text-shadow: 2px 2px 2px #222;
+}
+
+#blog-title a {
+  color: #F80;
+}
+
+.post-container {
+  border:1px dotted #999;
+  margin: 1em;
+  padding:0 1em 0 1em;
+  border-radius: 20px;
+  background-color:rgba(128,128,128,0.2)
+}
+
+.post-container h2 a {font-size: 1.5em;}
