@@ -15,13 +15,14 @@ If not,
 
  You can now type python3 at the command line to enter the python console and write/run python code
 
-**2. Install Pip**
+ **2. Install Pip**
+    * should be already included in Python 3
 
      $ sudo easy_install pip
 
-**3. Install Django**
+ **3. Install Django**
 
-    $ pip install
+     $ pip install django
 
 **4. To create and enter a virtual environment for your project, type the following in the directory you plan to place your project in:**
 
