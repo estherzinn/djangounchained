@@ -35,7 +35,7 @@ If not,
 
 **5. To start a new project, type the following:**
 
-(myvenv) ~/djangogirls$ django-admin startproject mysite .
+(myvenv) ~/projectname$ django-admin startproject mysite .
 
 **6. Create a separate folder in the main project directory for models, views, url paths, etc:**
 
