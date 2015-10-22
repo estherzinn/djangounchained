@@ -2,14 +2,14 @@
   {% block content %}
     <div class="post-container">
         <p><h2><a href="/post/{{post.id}}">{{ post.title }}</a></h2></p>
-        <p><small>{{ post.text|linebreaks }}</small></p>
+        <p><small>{% autoescape off %}{{ post.text|linebreaks }}{% endautoescape %}</small></p>
         <p><small><em>published: {{ post.published_date }} by <a href="/postsby/{{post.author.id}}">{{post.author}}</a></em></small></p>
         <div class="comment-container">
           <h2>Comments</h2>
         	{% for comment in comments %}
         		<div class="comment-content">
         			<h3>{{comment.author}}</h3>
-        			<p>{{comment.text}}</p>
+        			<p>{% autoescape off %}{{comment.text|linebreaks}}{% endautoescape %}</p>
               <p>{{comment.published_date}}</p>
         		</div>
         	{% endfor %}

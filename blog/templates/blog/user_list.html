@@ -2,23 +2,22 @@
   {% block content %}
     <ul id="user-list">
       {% for user in users %}
-          <div>
+          <div class="post-container">
             <a href="/postsby/{{user.id}}">{{user.username}}</a>
             {% if user.is_superuser %}
               <span class="super">[Administrator]</a>
             {% else %}
               <span class="staff">[Staff Contributor]
             {% endif %}
-          </div>
         {% for post in posts %}
           {% if post.author = user %}
-            <div>
-              <a class="sublink" href="/post/{{post.id}}">{{post}}</a><span class="date">{{post.published_date}}</span>
+            <div class="sublist-container" style="font-size: 1em;">
+              <a href="/post/{{post.id}}">{{post}}</a><span class="date">{{post.published_date}}</span>
             </div>
           {% endif %}
         {% endfor %}
-        <strong>{{ total }}</strong>
           	{{ user.posts }}
+          </div>
       {% endfor %}
     </ul>
 

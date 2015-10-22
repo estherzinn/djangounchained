@@ -63,16 +63,6 @@ small a {
 
 a:hover {text-decoration: underline}
 
-ul#main-nav{
-  margin: 0;
-  top:0;
-  list-style: none;
-  padding: 0;
-  background: #F80;
-  height: 2em;
-  font-family: 'lobster', cursive;
-  font-size: 1.3em;
-}
 
 ul#main-nav li{
     display: inline-block;
@@ -87,6 +77,17 @@ ul#main-nav li:first-child{
 ul#main-nav li a {
   color:#fff;
   text-shadow: 1px 1px 1px #222;
+}
+
+ul#main-nav{
+  margin: 0;
+  top:0;
+  list-style: none;
+  padding: 0;
+  background: #F80;
+  height: 2em;
+  font-family: 'lobster', cursive;
+  font-size: 1.3em;
 }
 
 ul#user-list {
@@ -147,6 +148,16 @@ ul#user-list a{
   background-color:rgba(128,128,128,0.2)
 }
 .comment-container {
+  border:1px dotted #999;
+  margin: 1em;
+  padding:0 1em 0 1em;
+  border-radius: 20px;
+  color: #eee;
+  text-shadow: 1px 1px 1px #222;
+  background-color:rgba(128,128,128,0.2)
+}
+.sublist-container {
+  font-size: 1em;
   border:1px dotted #999;
   margin: 1em;
   padding:0 1em 0 1em;
