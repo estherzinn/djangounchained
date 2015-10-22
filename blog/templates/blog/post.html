@@ -4,5 +4,28 @@
         <p><h2><a href="/post/{{post.id}}">{{ post.title }}</a></h2></p>
         <p><small>{{ post.text|linebreaks }}</small></p>
         <p><small><em>published: {{ post.published_date }} by <a href="/postsby/{{post.author.id}}">{{post.author}}</a></em></small></p>
+        <div class="comment-container">
+          <h2>Comments</h2>
+        	{% for comment in comments %}
+        		<div class="comment-content">
+        			<h3>{{comment.author}}</h3>
+        			<p>{{comment.text}}</p>
+              <p>{{comment.published_date}}</p>
+        		</div>
+        	{% endfor %}
+        </div>
+
+        <hr />
+
+        <div class="comment-input">
+          <form class="" action="index.html" method="post">
+            <textarea name="comment" form="usrform" rows="6" style="width:50%;border-radius:20px; padding:10px;" >Enter text here...</textarea>
+          <br/><br/>
+            <input type="button" name="submit" value="Submit">
+        </form>
+        <br/>
+      </div>
+
     </div>
+
   {% endblock content %}
