@@ -17,7 +17,7 @@ If not,
 
 **2. Install Pip**
 
-$ sudo easy_install pip
+     $ sudo easy_install pip
 
 **3. Install Django**
 
