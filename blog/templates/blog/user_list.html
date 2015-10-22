@@ -9,6 +9,7 @@
             {% else %}
               <span class="staff">[Staff Contributor]
             {% endif %}
+            {% user.post_set %}
           </div>
         {% for post in posts %}
           {% if post.author = user %}

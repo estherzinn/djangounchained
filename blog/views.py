@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Post
 from .models import User
 from .models import Comment
+from .models import UserProfile
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -15,6 +16,8 @@ def post(request, pk):
 
 def user_list(request):
 	users = User.objects.all
+	test = User.objects.get(pk=3)
+	print test.post_set
 	posts = Post.objects.all
 	return render(request, 'blog/user_list.html', {'users': users, 'posts': posts})
 
