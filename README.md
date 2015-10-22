@@ -15,14 +15,15 @@ If not,
 
  You can now type python3 at the command line to enter the python console and write/run python code
 
- **2. Install Pip**
-    * should be already included in Python 3
+**2. Install Pip**
+   * should be included in Python 3
 
-     $ sudo easy_install pip
+    $ sudo easy_install pip
 
- **3. Install Django**
+**3. Install Django**
 
-     $ pip install django
+    $ pip install django
+
 
 **4. To create and enter a virtual environment for your project, type the following in the directory you plan to place your project in:**
 
@@ -32,7 +33,11 @@ If not,
 
 * You will know it's successful if the command line prompt now has (myvenv) in front of it
 
-**5. Create a separate folder in the main project directory for models, views, url paths, etc:**
+**5. To start a new project, type the following:**
+
+(myvenv) ~/djangogirls$ django-admin startproject mysite .
+
+**6. Create a separate folder in the main project directory for models, views, url paths, etc:**
 
 * in the case of a blog application, we create a blog folder
 
