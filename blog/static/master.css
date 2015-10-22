@@ -26,20 +26,23 @@ p {
 }
 
 .super {
+  font-family: "Roboto", sans-serif;
   margin-left: 10px;
   color: #F00;
-  font-size: .5em;
+  font-size: .4em;
 }
 
 .staff {
+  font-family: "Roboto", sans-serif;
   margin-left: 10px;
   color: #00F;
-  font-size: .5em;
+  font-size: .4em;
 }
 .date {
+  font-family: "Roboto", sans-serif;
   margin-left: 10px;
   color: #000;
-  font-size: .5em;
+  font-size: .4em;
 }
 
 a {
@@ -52,6 +55,10 @@ a.sublink {
   font-size: .7em;
   text-shadow: none;
   margin-left: 12px;
+}
+
+small a {
+  text-shadow: 0 0 0;
 }
 
 a:hover {text-decoration: underline}
@@ -139,5 +146,49 @@ ul#user-list a{
   border-radius: 20px;
   background-color:rgba(128,128,128,0.2)
 }
+.comment-container {
+  border:1px dotted #999;
+  margin: 1em;
+  padding:0 1em 0 1em;
+  border-radius: 20px;
+  color: #eee;
+  text-shadow: 1px 1px 1px #222;
+  background-color:rgba(128,128,128,0.2)
+}
 
-.post-container h2 a {font-size: 1.5em;}
+
+.post-container h2 {
+  color: #eee;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px #222;
+}
+
+.post-container h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #eee;
+  text-shadow: 1px 1px 1px #222;
+}
+
+.comment-content p{
+  font-weight: 400;
+  text-shadow: 0px 0px 0px #222;
+
+}
+
+.comment-input {
+  margin: 1em;
+}
+
+input[type="button"]{
+  background-color: #f80;
+  color:#FFF;
+  width:8em;
+  height: 2em;
+  font-size: 1.3em;
+  padding: 0;
+  border-radius: .5em;
+  text-shadow: 1px 1px 1px #222;
+  font-family: "lobster", cursive;
+}
